@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6551d2ea-99f7-407f-bfbe-278109f20aae</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>ACOJ7Server</Name>
+    <RootNamespace>ACOJ7Server</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ACOJ7Server\account.py" />
+    <Compile Include="ACOJ7Server\ACEssentials\db.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ACOJ7Server\ACEssentials\response.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ACOJ7Server\ACEssentials\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ACOJ7Server\routes\submission.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ACOJ7Server\routes\test.py" />
+    <Compile Include="ACOJ7Server\routes\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="runserver.py" />
+    <Compile Include="ACOJ7Server\__init__.py" />
+    <Compile Include="ACOJ7Server\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ACOJ7Server\" />
+    <Folder Include="ACOJ7Server\ACEssentials\" />
+    <Folder Include="ACOJ7Server\routes\" />
+    <Folder Include="ACOJ7Server\static\" />
+    <Folder Include="ACOJ7Server\static\content\" />
+    <Folder Include="ACOJ7Server\static\fonts\" />
+    <Folder Include="ACOJ7Server\static\scripts\" />
+    <Folder Include="ACOJ7Server\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACOJ7Server\routes\user.py" />
+    <Content Include="requirements.txt" />
+    <Content Include="ACOJ7Server\static\content\bootstrap.css" />
+    <Content Include="ACOJ7Server\static\content\bootstrap.min.css" />
+    <Content Include="ACOJ7Server\static\content\site.css" />
+    <Content Include="ACOJ7Server\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ACOJ7Server\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ACOJ7Server\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="ACOJ7Server\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ACOJ7Server\static\scripts\bootstrap.js" />
+    <Content Include="ACOJ7Server\static\scripts\bootstrap.min.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery-1.10.2.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="ACOJ7Server\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery.validate.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery.validate.min.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="ACOJ7Server\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="ACOJ7Server\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="ACOJ7Server\static\scripts\respond.js" />
+    <Content Include="ACOJ7Server\static\scripts\respond.min.js" />
+    <Content Include="ACOJ7Server\static\scripts\_references.js" />
+    <Content Include="ACOJ7Server\templates\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
